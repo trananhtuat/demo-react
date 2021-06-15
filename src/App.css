@@ -1,0 +1,104 @@
+:root {
+    --body-bg: #181820;
+    --task-item-bg: #21212b;
+    --txt-color: #b2b2b5;
+    --btn-bg: #3e8739;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.main {
+    height: max-content;
+    min-height: 100vh;
+    background-color: var(--body-bg);
+    color: var(--txt-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 0;
+}
+
+.taskform-wrapper,
+.tasklist-wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.taskform {
+    padding: 10px;
+    border: 2px solid var(--task-item-bg);
+    border-radius: 20px;
+    display: flex;
+}
+
+.taskform > button {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    outline: 0;
+    border: 0;
+    background-color: var(--btn-bg);
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin-right: 10px;
+}
+
+.taskform > input {
+    flex-grow: 1;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    color: var(--txt-color);
+    font-size: 20px;
+}
+
+.tasklist,
+.taskform {
+    width: 100%;
+    max-width: 500px;
+}
+
+.tasklist > ul {
+    list-style-type: none;
+}
+
+.tasklist > ul > li {
+    margin-top: 10px;
+}
+
+.taskitem {
+    --btn-size: 30px;
+    background-color: var(--task-item-bg);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    /* align-items: ce; */
+}
+
+.taskitem > button {
+    width: var(--btn-size);
+    height: var(--btn-size);
+    outline: 0;
+    border: 2px solid var(--btn-bg);
+    background-color: transparent;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.taskitem > .content {
+    width: calc(100% - var(--btn-size));
+    display: flex;
+    align-items: center;
+}
